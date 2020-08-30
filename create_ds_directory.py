@@ -39,6 +39,7 @@ def call_create_folders(project_name):
 
 def call_create_files(path, project_name):
     config = path+project_name+'config.json'
+    ignore = path+project_name+'.gitignore'
     main = path+project_name+'Main.py' 
     readme= path+project_name+'README.md'
     train =  path+project_name+'src/models/train.py'
@@ -46,7 +47,7 @@ def call_create_files(path, project_name):
     visualize =  path+project_name+'src/visualization/visualize.py'
     make_dataset = path+project_name+'src/data/make_dataset.py'
 
-    files  = [main,config, readme,train, predict, visualize, make_dataset]
+    files  = [ignore, main,config, readme,train, predict, visualize, make_dataset]
 
     for i in files:
         create_file("",i)
